@@ -11,6 +11,10 @@ export default class DeviceStore {
     this._brands = [
       { id: 1, name: 'Samsung' },
       { id: 2, name: 'Apple' },
+      { id: 3, name: 'Lenovo' },
+      { id: 4, name: 'Asus' },
+      { id: 5, name: 'HP' },
+      { id: 6, name: 'Honor' },
     ];
     this._device = [
       {
@@ -35,6 +39,7 @@ export default class DeviceStore {
         img: 'https://www.purposechurch.com/wp-content/uploads/2017/10/fpo400x300.png',
       },
       (this._selectedType = {}),
+      (this._selectedBrand = {}),
     ];
     // func для слежения за переменными
     // в случае изменения - rerender
@@ -55,6 +60,11 @@ export default class DeviceStore {
     // this.setPage(1);
     this._selectedType = type;
   }
+  setSelectedBrand(brand) {
+    // this.setPage(1);
+    this._selectedBrand = brand;
+  }
+
   //getter
   get types() {
     return this._types;
@@ -67,5 +77,8 @@ export default class DeviceStore {
   }
   get selectedType() {
     return this._selectedType;
+  }
+  get selectedBrand() {
+    return this._selectedBrand;
   }
 }
