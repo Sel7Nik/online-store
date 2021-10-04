@@ -16,7 +16,7 @@ export default class DeviceStore {
       { id: 5, name: 'HP' },
       { id: 6, name: 'Honor' },
     ];
-    this._device = [
+    this._devices = [
       {
         id: 1,
         name: 'Iphone 12 pro',
